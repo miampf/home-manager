@@ -43,6 +43,9 @@
     pkgs.fortune
     pkgs.bat
     pkgs.eza
+    pkgs.git
+    pkgs.lazygit
+    pkgs.gh
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
@@ -85,4 +88,12 @@
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
+
+  programs.git = {
+    enable = true;
+    userName = "miampf";
+    userEmail = "miampf@proton.me";
+    signing.key = null;
+    signing.signByDefault = true;
+  };
 }
