@@ -39,6 +39,7 @@
     pkgs.vimPlugins.packer-nvim
     pkgs.fish
     pkgs.i3
+    pkgs.polybar
     pkgs.htop
     pkgs.fortune
     pkgs.bat
@@ -65,6 +66,7 @@
     ".config/nvim".source = dotfiles/.config/nvim;
     ".config/i3".source = dotfiles/.config/i3;
     ".config/fish".source = dotfiles/.config/fish;
+    ".config/polybar".source = dotfiles/.config/polybar;
   };
 
   # Home Manager can also manage your environment variables through
@@ -96,4 +98,8 @@
     signing.key = null;
     signing.signByDefault = true;
   };
+
+  xsession.enable = true;
+
+  xsession.windowManager.i3.enable = true;
 }
